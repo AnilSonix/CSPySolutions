@@ -38,7 +38,10 @@ def update(id, updated_contact):
 
 
 def id_exists(id):
-    return True
+    for contact in contacts:
+        if contact["id"] == id:
+            return True
+    return False
 
 
 def save():
